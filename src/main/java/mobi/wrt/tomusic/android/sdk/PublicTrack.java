@@ -12,6 +12,10 @@ public class PublicTrack implements Serializable {
 
     private Long duration;
 
+    private Long vkOwnerId;
+
+    private Long vkAudioId;
+
     public PublicTrack(String trackName, String artistName) {
         this.trackName = trackName;
         this.artistName = artistName;
@@ -47,5 +51,18 @@ public class PublicTrack implements Serializable {
 
     public void setDuration(Long duration) {
         this.duration = duration;
+    }
+
+    public void setVkInfo(Long vkOwnerId, Long vkAudioId) {
+        this.vkOwnerId = vkOwnerId;
+        this.vkAudioId = vkAudioId;
+    }
+
+    public Long getVkOwnerId() {
+        return vkOwnerId;
+    }
+
+    public Long getVkAudioId() {
+        return vkAudioId;
     }
 }
